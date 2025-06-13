@@ -58,16 +58,16 @@ async def main():
                 ),
             )
 
-        if response.function_calls:
-            first_call = response.function_calls[0]
-            name = first_call.name
-            args = first_call.args
-            print(f"> Gemini calls: {name}({args})")
+            if response.function_calls:
+                first_call = response.function_calls[0]
+                name = first_call.name
+                args = first_call.args
+                print(f"> Gemini calls: {name}({args})")
 
-            result = await session.call_tool(name, arguments=args)
-            print("> Tool result:", result)
-        else:
-            print("> Gemini says:", response.text)
+                result = await session.call_tool(name, arguments=args)
+                print("> Tool result:", result)
+            else:
+                print("> Gemini says:", response.text)
 
 
 if __name__ == "__main__":
