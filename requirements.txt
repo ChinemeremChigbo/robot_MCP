@@ -5,3 +5,7 @@ feetech-servo-sdk>=1.0.0
 pillow>=9.0.0
 mcp[cli]>=0.0.0
 opencv-python>=4.9.0
+mcp-flight-search>=0.2.1
+python-dotenv>=1.1.0
+google-genai>=1.20.0
+uvicorn[standard]
