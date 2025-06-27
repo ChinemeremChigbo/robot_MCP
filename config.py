@@ -40,19 +40,19 @@ class RobotConfig:
     cameras: Dict[str, CameraConfig] = field(
         default_factory=lambda: {
             "wrist": OpenCVCameraConfig(
-                camera_index=0,
-                fps=30,
-                width=1920,
-                height=1080,
-            ),
-            "side": OpenCVCameraConfig(
                 camera_index=1,
                 fps=30,
                 width=1920,
                 height=1080,
             ),
+            "side": OpenCVCameraConfig(
+                camera_index=0,
+                fps=30,
+                width=1920,
+                height=1080,
+            ),
             "top view": OpenCVCameraConfig(
-                camera_index=2,
+                camera_index=6,
                 fps=30,
                 width=640,
                 height=360,
